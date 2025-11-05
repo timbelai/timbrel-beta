@@ -1,14 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export const CTA: React.FC = () => {
-  const [email, setEmail] = useState('');
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert(`Obrigado por se inscrever, ${email}! Enviaremos novidades em breve.`);
-    setEmail('');
-  };
-  
   return (
     <section id="signup" className="py-20">
       <div className="container mx-auto px-6">
@@ -17,22 +9,24 @@ export const CTA: React.FC = () => {
           <p className="text-lg text-neutral-400 mb-8">
             👉 As vagas são limitadas. Cadastre-se agora para garantir seu lugar.
           </p>
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input 
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Seu melhor e-mail"
-              required
-              className="flex-grow w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all"
-            />
-            <button
-              type="submit"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="https://forms.gle/mR9S6U13a8f1xMs6A" 
+              target="_blank" 
+              rel="noopener noreferrer" 
               className="bg-gradient-to-r from-orange-500 to-fuchsia-600 hover:from-orange-600 hover:to-fuchsia-700 text-white font-bold py-3 px-6 rounded-lg text-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
             >
-              QUERO FAZER PARTE DO BETA 🔥
-            </button>
-          </form>
+              Cadastrar como Talento 🚀
+            </a>
+            <a 
+              href="https://forms.gle/ynHJE5UUjmKnk8nY7" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-gradient-to-r from-purple-600 to-lime-400 hover:from-purple-700 hover:to-lime-500 text-white font-bold py-3 px-6 rounded-lg text-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+            >
+              Cadastrar como Produtor 🎤
+            </a>
+          </div>
         </div>
       </div>
     </section>

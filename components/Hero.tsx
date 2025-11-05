@@ -1,10 +1,6 @@
 import React from 'react';
 import { CountdownTimer } from './CountdownTimer';
 
-const scrollToSignup = () => {
-  document.getElementById('signup')?.scrollIntoView({ behavior: 'smooth' });
-};
-
 export const Hero: React.FC = () => {
   return (
     <section 
@@ -26,12 +22,24 @@ export const Hero: React.FC = () => {
 
           <CountdownTimer />
 
-          <button
-            onClick={scrollToSignup}
-            className="bg-gradient-to-r from-orange-500 to-fuchsia-600 hover:from-orange-600 hover:to-fuchsia-700 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
-          >
-            QUERO FAZER PARTE DO BETA 🔥
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <a 
+              href="https://forms.gle/mR9S6U13a8f1xMs6A" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-gradient-to-r from-orange-500 to-fuchsia-600 hover:from-orange-600 hover:to-fuchsia-700 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+            >
+              Cadastrar como Talento 🚀
+            </a>
+            <a 
+              href="https://forms.gle/ynHJE5UUjmKnk8nY7" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-gradient-to-r from-purple-600 to-lime-400 hover:from-purple-700 hover:to-lime-500 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+            >
+              Cadastrar como Produtor 🎤
+            </a>
+          </div>
         </div>
       </div>
     </section>
